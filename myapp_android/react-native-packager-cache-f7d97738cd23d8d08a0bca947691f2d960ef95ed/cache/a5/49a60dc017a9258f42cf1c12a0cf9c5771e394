@@ -1,0 +1,89 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/home/guy/gits/react-native-projects/myapp_android/index.android.js';
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var myapp_android = function (_Component) {
+  babelHelpers.inherits(myapp_android, _Component);
+
+  function myapp_android() {
+    babelHelpers.classCallCheck(this, myapp_android);
+    return babelHelpers.possibleConstructorReturn(this, (myapp_android.__proto__ || Object.getPrototypeOf(myapp_android)).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(myapp_android, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _reactNative.View,
+        { style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+          }
+        },
+        _react2.default.createElement(
+          _reactNative.Text,
+          { style: styles.welcome, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 19
+            }
+          },
+          'Welcome to React Native!'
+        ),
+        _react2.default.createElement(
+          _reactNative.Text,
+          { style: styles.instructions, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 22
+            }
+          },
+          'To get started, edit index.android.js'
+        ),
+        _react2.default.createElement(
+          _reactNative.Text,
+          { style: styles.instructions, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 25
+            }
+          },
+          'Double tap R on your keyboard to reload,',
+          '\n',
+          'Shake or press menu button for dev menu'
+        )
+      );
+    }
+  }]);
+  return myapp_android;
+}(_react.Component);
+
+exports.default = myapp_android;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  }
+});
+
+_reactNative.AppRegistry.registerComponent('myapp_android', function () {
+  return myapp_android;
+});
