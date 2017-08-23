@@ -11,6 +11,7 @@ export default class Component1 extends Component{
   }
 
 render(){
+  console.log('HELLO' + "that is console");
   let name = true ? this.state.showName + this.state.name + " add " + this.state: 'no name';
   return(
     <View>
