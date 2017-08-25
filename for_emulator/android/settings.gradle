@@ -1,0 +1,3 @@
+rootProject.name = 'for_emulator'
+
+include ':app'
