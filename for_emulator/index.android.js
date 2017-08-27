@@ -15,9 +15,25 @@ import {
 export default class for_emulator extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View stimport React, { Component } from 'react';
+import { AppRegistry, View } from 'react-native';
+
+export default class FixedDimensionsBasics extends Component {
+  render() {
+    return (
+      <View>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
+        <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+      </View>
+    );
+  }
+}
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionsBasics);yle={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Hello my name is Guy!!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
