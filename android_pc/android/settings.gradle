@@ -1,3 +1,0 @@
-rootProject.name = 'android_pc'
-
-include ':app'
