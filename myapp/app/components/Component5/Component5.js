@@ -13,13 +13,21 @@ export default class Component5 extends Component{
 
   fatchusers(){
     fatch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => response.jason())
+    .then((response) => {
+      this.setState({
+        userDataSource:this.state.userDataSource.cloneWithRows(response)
+
+      });
+    });
   }
 
     render(){
       return(
-        <View>
-          <Text>Component5</Text>
-        </View>
+        <ListView
+          dataSource={this.state.userDataSource}
+          renderRow={this.renderRow.bind(this)}
+          />
       );
     }
 
