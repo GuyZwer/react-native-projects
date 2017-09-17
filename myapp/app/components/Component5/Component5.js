@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, styleSheet, ListView} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, ListView, TouchableHighlight} from 'react-native';
 
 
 export default class Component5 extends Component{
@@ -11,18 +11,56 @@ export default class Component5 extends Component{
     };
   }
 
-  fatchusers(){
-    fatch('https://jsonplaceholder.typicode.com/users')
+  componentDidMount(){
+    this.fetchUsers();
   }
 
+  fetchUsers(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => response.json())
+    .then((response) => {
+        this.setState({
+          userDataSource:this.state.userDataSource.cloneWithRows(response)
+      });
+    });
+  }
+
+  onPress(user){
+    this.props.navigator.push({
+      id: 'component6'
+    });
+  }
+
+  renderRow(user, sectionId, rowId, HighlightRow){
+    return(
+    <TouchableHighlight onPress={() => {this.onPress(user)}}>
+    <View style={styles.row}>
+      <Text style={styles.rowText}>{user.name}:{user.email}</Text>
+    </View>
+    </TouchableHighlight>
+  )
+}
     render(){
       return(
-        <View>
-          <Text>Component5</Text>
-        </View>
+        <ListView
+          dataSource={this.state.userDataSource}
+          renderRow={this.renderRow.bind(this)}
+          />
       );
     }
 
 }
+const styles = StyleSheet.create({
+  row: {
+    flexDirection:'row',
+    justifyContent:'center',
+    padding:20,
+    backgroundColor:'#f4f4f9',
+    marginBottom:1,
 
+  },
+  rowText:{
+    flex:1
+  }
+});
 AppRegistry.registerComponent('Component5', () => Component5);
