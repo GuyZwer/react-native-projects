@@ -1,0 +1,3 @@
+rootProject.name = 'DaBox2'
+
+include ':app'
