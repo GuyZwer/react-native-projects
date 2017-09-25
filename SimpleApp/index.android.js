@@ -5,6 +5,9 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
+import Guy from './Guy';
+import Lucy from './Lucy';
+
 class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Welcome',
@@ -35,7 +38,7 @@ class ChatScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text>Chat with Lucy</Text>
+        <Guy />
       </View>
     );
   }
@@ -48,7 +51,7 @@ class ChatScreen2 extends React.Component {
   render() {
     return (
       <View>
-        <Text>Chat with Guy</Text>
+        <Lucy />
       </View>
     );
   }
