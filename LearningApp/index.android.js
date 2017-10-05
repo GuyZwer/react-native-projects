@@ -9,20 +9,25 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
-import {HelloWorldApp, Bananas, Test, LotsOfGreetings} from './Components/LearningComponent'
+import {HelloWorldApp, Bananas, Test, LotsOfGreetings, BlinkApp, LotsOfStyles, Blink} from './Components/LearningComponent'
 
 export default class LearningApp extends Component {
   render() {
     return (
+      <ScrollView>
       <View>
         <HelloWorldApp />
         <Bananas />
         <Test />
         <LotsOfGreetings />
+        <BlinkApp />
+        <LotsOfStyles />
       </View>
+      </ScrollView>
     )
   }
 }
