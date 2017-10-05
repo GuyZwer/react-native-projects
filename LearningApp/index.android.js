@@ -4,32 +4,37 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  ScrollView
-} from 'react-native';
+import React, { Component } from 'react'
+import { AppRegistry, StyleSheet, Text, View, ScrollView } from 'react-native'
 
-import {HelloWorldApp, Bananas, Test, LotsOfGreetings, BlinkApp, LotsOfStyles, Blink} from './Components/LearningComponent'
+import {
+  HelloWorldApp,
+  Bananas,
+  Test,
+  LotsOfGreetings,
+  BlinkApp,
+  LotsOfStyles,
+  Blink
+} from './Components/LearningComponent'
 
 export default class LearningApp extends Component {
   render() {
     return (
       <ScrollView>
-      <View>
-        <HelloWorldApp />
-        <Bananas />
-        <Test />
-        <LotsOfGreetings />
-        <BlinkApp />
-        <LotsOfStyles />
-      </View>
+        <View>
+          <HelloWorldApp />
+          <Bananas />
+          <Test />
+          <LotsOfGreetings />
+          <BlinkApp />
+          <LotsOfStyles />
+          <FixedDimensionsBasics />
+          <FlexDimensionsBasics />
+          <JustifyContentBasics />
+        </View>
       </ScrollView>
     )
   }
 }
 
-AppRegistry.registerComponent('LearningApp', () => LearningApp);
+AppRegistry.registerComponent('LearningApp', () => LearningApp)
