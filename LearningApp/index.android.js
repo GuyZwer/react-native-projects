@@ -14,7 +14,17 @@ import {
   LotsOfGreetings,
   BlinkApp,
   LotsOfStyles,
-  Blink
+  FixedDimensionsBasics,
+  FlexDimensionsBasics,
+  FlexDirectionBasics,
+  JustifyContentBasics,
+  AlignItemsBasics,
+  PizzaTranslator,
+  ButtonBasics,
+  Touchables,
+  IScrolledDownAndWhatHappenedNextShockedMe,
+  FlatListBasics,
+  SectionListBasics,
 } from './Components/LearningComponent'
 
 export default class LearningApp extends Component {
@@ -30,7 +40,15 @@ export default class LearningApp extends Component {
           <LotsOfStyles />
           <FixedDimensionsBasics />
           <FlexDimensionsBasics />
+          <FlexDirectionBasics />
           <JustifyContentBasics />
+          <AlignItemsBasics />
+          <PizzaTranslator />
+          <ButtonBasics />
+          <Touchables />
+          <IScrolledDownAndWhatHappenedNextShockedMe />
+          <FlatListBasics />
+          <SectionListBasics />
         </View>
       </ScrollView>
     )
